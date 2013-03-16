@@ -1,0 +1,11 @@
+doctype html
+html
+  h1 Add Address
+  form methods="POST" action="/addresses"
+    label for="street_number" Street Number
+    input#street_number type="text" name="address[street_number]" value="#{@address.street_number if @address.street_number?}"
+    label for="family" Family Info
+    textarea#family type="text" name="address[family]" value="#{@address.family if @address.family?}"
+    label for="phone_number" Phone Number
+    input#phone_number type="text" name="address[phone_number]" value="#{@address.phone_number if @address.phone_number?}"
+    input type="submit" value="Save Address"
